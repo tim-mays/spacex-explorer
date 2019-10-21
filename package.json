@@ -1,0 +1,38 @@
+{
+  "name": "spacex-explorer",
+  "version": "1.0.0",
+  "description": "Explore SpaceX data with qraphql",
+  "engines": {
+    "node": "10.15.0"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server/start.js",
+    "server": "NODE_ENV=development nodemon -r esm server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim-mays/spacex-explorer.git"
+  },
+  "author": "Tim Mays",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tim-mays/spacex-explorer/issues"
+  },
+  "homepage": "https://github.com/tim-mays/spacex-explorer#readme",
+  "dependencies": {
+    "axios": "0.19.0",
+    "concurrently": "5.0.0",
+    "cors": "2.8.5",
+    "esm": "3.2.25",
+    "express": "4.17.1",
+    "express-graphql": "0.9.0",
+    "graphql": "14.5.8"
+  },
+  "devDependencies": {
+    "nodemon": "1.19.4"
+  }
+}
